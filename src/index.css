@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  Remove default link style
+*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+  Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-size: 1rem;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+}
+
+header {
+  height: 280px;
+  background-image: url(./assets/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #FFF;
+}
+
+.title {
+  padding: 2rem 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.ip-search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.ip-search-input,
+.ip-search-submit {
+  padding: 1.3rem;
+  outline: none;
+  border: none;
+}
+
+.ip-search-input {
+  border-radius: 1rem 0 0 1rem;
+  width: 100%;
+}
+
+.ip-search-submit {
+  border-radius: 0 1rem 1rem 0;
+  background-color: black;
+}
+
+.info-wrapper {
+  position: absolute;
+  top: 175px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: auto;
+  border-radius: 1rem;
+  background-color: #FFF;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 999;
+}
+
+.info {
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.info-title {
+  color: hsl(0, 0%, 59%);
+  font-weight: 700;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.info-text {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 17%);
+  font-weight: 500;
+}
+
+.leaflet-container {
+  height: calc(100vh - 280px);
+  max-height: calc(100vh - 280px);
+  max-width: 100vw;
+}
+
+@media (min-width: 1360px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .info {
+    border-right: 1px solid rgb(217, 217, 217);
+    flex: 1;
+    text-align: left;
+  }
+
+  .info:last-child {
+    border-right: none;
+  }
+
+  .info-wrapper {
+    top: 215px;
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .info-title {
+    font-size: 1rem;
+  }
+
+  .info-text {
+    font-size: 1.5rem;
+  }
+
+  .ip-search-form {
+    max-width: 555px;
+  }
+
+  .ip-search-submit:hover {
+    background-color: rgb(63, 63, 63);
+    cursor: pointer;
+  }
+}
